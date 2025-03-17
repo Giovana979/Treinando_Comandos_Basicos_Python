@@ -1,0 +1,14 @@
+print ("1 - Saque")
+print ("2 - Depósito")
+op = int(input("Escolha a operação: "))
+
+
+if op == 1:
+  saque = int(input("insira o valor do saque: "))
+  if saque >= 1000:
+    print("Saldo  insuficiente :(")
+  else:
+    print(f"Valor sacado R${saque}")
+else:
+  dep = int(input("Insira o valor do depósito: "))
+  print(f"Valor depositado R${dep}")
