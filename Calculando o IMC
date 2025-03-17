@@ -1,0 +1,23 @@
+peso = int (input("Peso: "))
+altura = float (input("Altura: "))
+
+#IMC = Massa (kg) ÷ Altura (m)².
+IMC = peso / (altura ** 2)
+#Menor que 18,5 = abaixo do peso.
+if IMC < 18.5:
+  print(f"Seu IMC = {IMC} Você está abaixo do peso!")
+#Entre 18,5 e 24,9 = peso normal.
+elif IMC >= 18.5 and IMC <= 24.9:
+  print(f"Seu IMC = {IMC} Você está com peso normal!")
+#Entre 25 e 29,9 = sobrepeso.
+elif IMC >= 25 and IMC <= 29.9:
+  print(f"Seu IMC = {IMC} Você está sobrepeso!")
+#Entre 30 e 34,99 = obesidade grau I.
+elif IMC >= 30 and IMC <= 34.99:
+  print(f"Seu IMC = {IMC} Você está com obesidade de Grau I")
+#Entre 35 e 39,99 = obesidade grau II (severa).
+elif IMC >= 35 and IMC <= 39.99:
+  print(f"Seu IMC = {IMC} Você está com obesidade de Grau II")
+#Acima de 40 = obesidade grau III (mórbida).
+else:
+  print(f"Seu IMC = {IMC} Você está com obesidade de Grau III")
