@@ -1,0 +1,30 @@
+repositor = []
+
+while True:
+    print("SISTEMA DE GERENCIAMENTO DE REPOSITÓRIO")
+    print("1. Adicionar Arquivo")
+    print("2. Listar Arquivos")
+    print("3. Sair do Sistema")
+
+    escolha = input("Escolha uma opção: ")
+
+    if escolha == '1':
+        nome = input("NOME DO ARQUIVO: ")
+        conteudo = input("CONTEÚDO DO ARQUIVO: ")
+        materia = input("MATERIA DO ARQUIVO: ")
+        arquivo = { 'nome' : nome, 'conteudo' : conteudo, 'materia' : materia}
+        repositor.append(arquivo)
+        print("Salvo com sucesso o seu ARQUIVO!!!")
+    elif escolha == '2':
+        if repositor:
+            print("LISTA DE ARQUIVOS")
+            for i, arquivo in enumerate(repositor, 1):
+                print(f"{i}. Nome: {arquivo['nome']}, Conteúdo: {arquivo['conteudo']}, Materia: {arquivo['materia']}")
+        else:
+            print("Nenhum arquivo cadastrado :(")
+    elif escolha == '3':
+        print("Saindo...")
+        break
+    else:
+        print("Opção Inválida! Tente novamente")                             
+             
